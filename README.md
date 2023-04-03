@@ -30,10 +30,8 @@ To get `rust-analyzer`, we will install the VSCode integration called `rust-lang
 I then recommand to alter your VSCode config (`Cmd+,`) and add the following keys:
 ```json
 {
-    ...
     "editor.formatOnSave": true,
-    "rust-analyzer.checkOnSave.command": "clippy",  # use clippy instead of check to get more accurate diagnostics and warnings
-    ...
+    "rust-analyzer.checkOnSave.command": "clippy",
 }
 ```
 
@@ -46,7 +44,6 @@ Here are some other additional extensions that will make your developper experie
 Some nice formatting options for your code are gated behind the nightly toolchain of Rust. In particular, the option to sort imports by type (std,3p,prj for instance). To get this, we can install the latest nightly toolchain using rustup (`rustup toolchain install nightly`). Then add the following in your vscode config file:
 ```json
 {
-    ...
     "rust-analyzer.rustfmt.extraArgs": [
         "+nightly"
     ],
